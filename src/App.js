@@ -8,9 +8,9 @@ const App = () => {
     <Router>
       <Routes>
         {/* 첫 페이지 */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         {/* 키보드 체험 페이지 */}
-        <Route path="/keyboard-experience" element={<KeyboardExperience />} />
+        <Route path="/keyboard-experience" element={<KeyboardExperience/>} />
       </Routes>
     </Router>
   );

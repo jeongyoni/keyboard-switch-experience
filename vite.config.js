@@ -1,7 +1,4 @@
 // vite.config.js
 export default {
-  server: {
-    historyApiFallback: true, // React Router의 history API 사용을 허용
-  },
-}
-	
+  base: '/', // 여기에서 기본 경로를 설정
+};
