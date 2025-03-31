@@ -1,4 +1,7 @@
 // vite.config.js
 export default {
-  base: '/', // 여기에서 기본 경로를 설정
+  base: '/',
+  server: {
+    historyApiFallback: true,  // This will handle all route requests and serve the index.html
+  },
 };
