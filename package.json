@@ -4,7 +4,7 @@
   "description": "Mechanical Keyboard Simualtor",
   "main": "index.js",
   "scripts": {
-    "dev":"vite",
+    "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
@@ -12,17 +12,16 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "vite":"2.0.0",
-    "@vitejs/plugin-react": "^1.0.0",  // react 관련 vite 플러그인
-    "react-refresh": "^0.10.0" , // React Fast Refresh
-    
+    "@vitejs/plugin-react": "^1.0.0",
+    "react-refresh": "^0.10.0",
+    "vite": "^6.2.4"
   },
   "dependencies": {
-    "react": "^18.0.0",  // react 버전 업데이트
-    "react-dom": "^18.0.0",  // react-dom 버전 업데이트
+    "howler": "^2.2.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
-    "redux": "^4.1.2",
-    "howler": "^2.2.0",  // 오디오 관련 패키지
-    "react-icons": "^4.3.1"
+    "redux": "^4.1.2"
   }
 }

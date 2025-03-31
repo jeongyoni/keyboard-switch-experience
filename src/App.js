@@ -1,16 +1,17 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import store from './app/store';
-import App from './App';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './features/home/Home';
+import KeyboardExperience from './features/keyboardExperience/KeyboardExperience';
 
-test('renders "키감 체험하기" button', () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/keyboard-experience" component={KeyboardExperience} />
+      </Switch>
+    </Router>
   );
+}
 
-  // "키감 체험하기" 버튼이 화면에 나타나는지 확인
-  expect(getByText(/키감 체험하기/i)).toBeInTheDocument();
-});
+export default App;
