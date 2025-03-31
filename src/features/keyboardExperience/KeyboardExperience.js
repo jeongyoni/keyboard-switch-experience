@@ -1,17 +1,13 @@
-// src/features/keyboardExperience/KeyboardExperience.js
-
 import React from 'react';
-import Keyboard from '../../components/Keyboard';  // 실제 키보드 컴포넌트 임포트
+import KeySimulator from '../keySimulator/KeySimulator'; // 키보드 시뮬레이터 컴포넌트
 
 const KeyboardExperience = () => {
   return (
-    <div className="keyboard-experience">
+    <div>
       <h1>키보드 체험하기</h1>
-      <p>이 페이지에서 Groovestone 키보드의 타건감을 체험할 수 있습니다.</p>
-      <div className="keyboard-simulator">
-        {/* 실제 키보드 컴포넌트 */}
-        <Keyboard layoutKey="9009_wkltkl" pressedKey="" handleMouseDown={() => {}} handleMouseUp={() => {}} />
-      </div>
+      <p>이곳에서 Groovestone 키보드를 체험할 수 있습니다.</p>
+      {/* 키보드 시뮬레이터 렌더링 */}
+      <KeySimulator />
     </div>
   );
 };

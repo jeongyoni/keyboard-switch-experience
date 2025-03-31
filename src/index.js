@@ -1,25 +1,15 @@
+// index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Main from './features/main/Main';
-import store from './features/store/store.js';
-import { Provider } from 'react-redux';
-import * as serviceWorker from './serviceWorker';
-
-require('./assets/images/favicon.ico');
-require('file-loader?name=[name].[ext]!./index.html');
-
+import App from './App'; // App.js 임포트
+import { BrowserRouter as Router } from 'react-router-dom'; // React Router
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <Main />
-    </Provider>
+    <Router> {/* Router로 감싸줘야 한다 */}
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
