@@ -1,12 +1,18 @@
+// filepath: /Users/yunjeong-yeon/Desktop/jeong-github-blog/GitHub/무제 폴더/keyboard-switch-experience/vite.config.js
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: './', // 상대 경로로 설정
+  base: './',
   build: {
-    outDir: 'dist', // 빌드 결과물 디렉토리
-    assetsDir: 'assets', // 번들링된 파일이 저장될 디렉토리
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false, // 소스맵 비활성화
   },
   server: {
-    historyApiFallback: true, // SPA 라우팅 지원
+    historyApiFallback: true,
+    https: false,
+    headers: {
+      'Content-Security-Policy': "script-src 'self' 'unsafe-eval';",
+    },
   },
 });
